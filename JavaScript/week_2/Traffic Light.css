@@ -1,0 +1,28 @@
+.light-box {
+  width: 100px;
+  height: 300px;
+  background: #333;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.light {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #111;
+  opacity: 0.3;
+}
+
+.green { background: green; }
+.orange { background: orange; }
+.red { background: red; }
+
+.active {
+  opacity: 1;
+}
