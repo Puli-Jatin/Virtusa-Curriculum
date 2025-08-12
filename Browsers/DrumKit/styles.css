@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Blue gradient */
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin: 24px 0 6px;
+}
+
+.hint {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 20px;
+}
+
+.keys {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(9, minmax(72px, 1fr));
+  gap: 12px;
+}
+
+.key {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 14px 8px;
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.key kbd {
+  font: 600 18px/1 ui-monospace, Consolas, Menlo, monospace;
+}
+
+.key .sound {
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.key.playing {
+  transform: scale(1.05); /* Small grow animation */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4),
+              0 0 10px rgba(255, 255, 255, 0.6);
+  border-color: #ffd166;
+}
+
+@media (max-width: 840px) {
+  .keys { grid-template-columns: repeat(3, minmax(90px, 1fr)); }
+}
+
+@media (max-width: 420px) {
+  .keys { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}

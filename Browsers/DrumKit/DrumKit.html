@@ -1,57 +1,33 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JavaScript Drum Kit</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <h1>Drum Kit</h1>
-  <p class="hint">Press the keys (A–L) or tap/click the pads</p>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Drum Kit</title>
+<link rel="stylesheet" href="styles.css" />
 
-  <div class="keys" role="list">
-    <!-- data-key uses keyCode for easy matching in JS -->
-    <button class="key" role="listitem" data-key="65" aria-label="clap A">
-      <kbd>A</kbd><span class="sound">clap</span>
-    </button>
-    <button class="key" role="listitem" data-key="83" aria-label="hihat S">
-      <kbd>S</kbd><span class="sound">hihat</span>
-    </button>
-    <button class="key" role="listitem" data-key="68" aria-label="kick D">
-      <kbd>D</kbd><span class="sound">kick</span>
-    </button>
-    <button class="key" role="listitem" data-key="70" aria-label="openhat F">
-      <kbd>F</kbd><span class="sound">openhat</span>
-    </button>
-    <button class="key" role="listitem" data-key="71" aria-label="boom G">
-      <kbd>G</kbd><span class="sound">boom</span>
-    </button>
-    <button class="key" role="listitem" data-key="72" aria-label="ride H">
-      <kbd>H</kbd><span class="sound">ride</span>
-    </button>
-    <button class="key" role="listitem" data-key="74" aria-label="snare J">
-      <kbd>J</kbd><span class="sound">snare</span>
-    </button>
-    <button class="key" role="listitem" data-key="75" aria-label="tom K">
-      <kbd>K</kbd><span class="sound">tom</span>
-    </button>
-    <button class="key" role="listitem" data-key="76" aria-label="tink L">
-      <kbd>L</kbd><span class="sound">tink</span>
-    </button>
-  </div>
+<h1>Drum Kit</h1>
+<p class="hint">Press A – L or click pads. Works even if sounds are missing (test beep).</p>
 
-  <!-- Audio elements (one per sound) -->
-  <audio data-key="65" src="sounds/clap.wav"></audio>
-  <audio data-key="83" src="sounds/hihat.wav"></audio>
-  <audio data-key="68" src="sounds/kick.wav"></audio>
-  <audio data-key="70" src="sounds/openhat.wav"></audio>
-  <audio data-key="71" src="sounds/boom.wav"></audio>
-  <audio data-key="72" src="sounds/ride.wav"></audio>
-  <audio data-key="74" src="sounds/snare.wav"></audio>
-  <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+<div class="keys">
+  <button class="key" data-key="65"><kbd>A</kbd><span class="sound">clap</span></button>
+  <button class="key" data-key="83"><kbd>S</kbd><span class="sound">hihat</span></button>
+  <button class="key" data-key="68"><kbd>D</kbd><span class="sound">kick</span></button>
+  <button class="key" data-key="70"><kbd>F</kbd><span class="sound">openhat</span></button>
+  <button class="key" data-key="71"><kbd>G</kbd><span class="sound">boom</span></button>
+  <button class="key" data-key="72"><kbd>H</kbd><span class="sound">ride</span></button>
+  <button class="key" data-key="74"><kbd>J</kbd><span class="sound">snare</span></button>
+  <button class="key" data-key="75"><kbd>K</kbd><span class="sound">tom</span></button>
+  <button class="key" data-key="76"><kbd>L</kbd><span class="sound">tink</span></button>
+</div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+<audio data-key="65" src="sounds/clap.wav"></audio>
+<audio data-key="83" src="sounds/hihat.wav"></audio>
+<audio data-key="68" src="sounds/kick.wav"></audio>
+<audio data-key="70" src="sounds/openhat.wav"></audio>
+<audio data-key="71" src="sounds/boom.wav"></audio>
+<audio data-key="72" src="sounds/ride.wav"></audio>
+<audio data-key="74" src="sounds/snare.wav"></audio>
+<audio data-key="75" src="sounds/tom.wav"></audio>
+<audio data-key="76" src="sounds/tink.wav"></audio>
+
+<script src="script.js"></script>
