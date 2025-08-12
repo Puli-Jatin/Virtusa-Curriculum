@@ -1,0 +1,37 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: system-ui, -apple-system, Arial, sans-serif;
+  background: #ff01bb url('https://i.imgur.com/b9r5sEL.jpg') center/cover no-repeat;
+}
+
+.keys {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.key {
+  border: .4rem solid rgb(0, 0, 0);
+  border-radius: .5rem;
+  padding: 1rem .5rem;
+  width: 6rem;
+  text-align: center;
+  background: rgba(0, 34, 255, 0.4);
+  color: #fff;
+  text-shadow: 0 0 .5rem #ff0000;
+  transition: transform .07s ease, border-color .07s ease, box-shadow .07s ease;
+}
+
+.key kbd { display: block; font-size: 1.5rem; }
+.key .sound { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; opacity: .8; }
+
+.key.playing {
+  transform: scale(1.1);
+  border-color: #09ff00;
+  box-shadow: 0 0 1rem #26ff00;
+}
