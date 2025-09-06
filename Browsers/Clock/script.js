@@ -1,18 +1,13 @@
 function updateClock() {
-    const now = new Date();
+    let now = new Date();
+    let hr = now.getHours() % 12;
+    let min = now.getMinutes();
+    let sec = now.getSeconds();
 
-    const seconds = now.getSeconds();
-    const minutes = now.getMinutes();
-    const hours = now.getHours();
+    document.getElementById("hour").style.transform = `translateX(-50%) rotate(${hr*30 + min*0.5}deg)`;
+    document.getElementById("minute").style.transform = `translateX(-50%) rotate(${min*6}deg)`;
+    document.getElementById("second").style.transform = `translateX(-50%) rotate(${sec*6}deg)`;
+}
 
-    const secondDeg = (seconds / 60) * 360;
-    const minuteDeg = ((minutes + seconds/60) / 60) * 360;
-    const hourDeg = ((hours % 12 + minutes/60 + seconds/3600) / 12) * 360;
-
-    document.getElementById('second-hand').style.transform = `rotate(${secondDeg}deg)`;
-    document.getElementById('minute-hand').style.transform = `rotate(${minuteDeg}deg)`;
-    document.getElementById('hour-hand').style.transform = `rotate(${hourDeg}deg)`;
-  }
-
-  setInterval(updateClock, 1000);
-  updateClock();
+setInterval(updateClock, 1000);
+updateClock();
